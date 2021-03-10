@@ -33,9 +33,9 @@ module.exports = {
                 use: 'babel-loader', //integração do babel e da webpack, convertendo o arquivo para que o browser entenda
             },
             {
-                test: /\.css$/, //configuração para ler css
+                test: /\.scss$/, //configuração para ler css
                 exclude: /node_modules/, 
-                use: ['style-loader', 'css-loader'], 
+                use: ['style-loader', 'css-loader', 'sass-loader'], 
             }
         ]
     }
