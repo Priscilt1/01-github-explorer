@@ -1,9 +1,13 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+//variaveis ambientes
+const isDevelopment = process.env.NODE_ENV !== 'production'
+
 module.exports = {
-    mode: 'development',
-    devtool: 'eval-source-map', //SourceMaps - O mesmo codigo da aplicação para conseguir debugar
+    // se (?) tiver em modo de desevolvimento, (:) senão é produção
+    mode: isDevelopment ? 'development' : 'production',
+    devtool: isDevelopment ? 'eval-source-map' : 'source-map', //SourceMaps - O mesmo codigo da aplicação para conseguir debugar
     //com o path, permite que caminhe ate o aquivo sem colocar a barra, usando o dirname (diretorio), evitando o conflito entre barras
     entry: path.resolve(__dirname, 'src', 'index.jsx'), //arquivo principal
     output: { //arquivo de saida que sera mandando para o bundle
