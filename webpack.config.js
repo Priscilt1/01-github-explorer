@@ -9,8 +9,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     }, 
-    resolve : {
+    resolve: {
         extensions: ['.js', '.jsx'],
+    },
+    devServer: { //automatização/servidor
+        contentBase: path.resolve(__dirname, 'public') //avisando o conteudo estatico
     },
     plugins: [ //Injetando de forma automatizada o html com o script
         new HtmlWebpackPlugin({ 

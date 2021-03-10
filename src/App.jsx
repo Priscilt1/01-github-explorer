@@ -1,3 +1,3 @@
 export function App() {
-    return <h1>Wello Word</h1>
+    return <h1>Wello ReactJS</h1>
 }
