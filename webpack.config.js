@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+    mode: 'development',
     //com o path, permite que caminhe ate o aquivo sem colocar a barra, usando o dirname (diretorio), evitando o conflito entre barras
     entry: path.resolve(__dirname, 'src', 'index.jsx'), //arquivo principal
     output: { //arquivo de saida que sera mandando para o bundle
