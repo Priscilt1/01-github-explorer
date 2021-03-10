@@ -31,6 +31,11 @@ module.exports = {
                 test: /\.jsx$/, //para indentificar se é o arquivo js ou não pela a extensão
                 exclude: /node_modules/, //para o node nao importar para o browser o arquivo jsx. (ja que é responsabilidade do react)
                 use: 'babel-loader', //integração do babel e da webpack, convertendo o arquivo para que o browser entenda
+            },
+            {
+                test: /\.css$/, //configuração para ler css
+                exclude: /node_modules/, 
+                use: ['style-loader', 'css-loader'], 
             }
         ]
     }
