@@ -17,7 +17,7 @@ export function RepositoryList() {
     useEffect(() => { //chamando a api
         fetch('https://api.github.com/orgs/rocketseat/repos') //buscando os dados da api
         .then(response => response.json()) //convertendo para json
-        .then(data => console.log(data))
+        .then(data => setRepositories(data)) //para salvar no data
 
     }, []) //segundo parametro[dependências]
 
