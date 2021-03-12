@@ -4,12 +4,6 @@ import { useState, useEffect } from "react"
 import { RepositoryItem } from "./RepositoryItem"
 
 
-const repository = {
-    name: 'unform',
-    description: 'Forms in React',
-    link: 'https://github.com/unform/unform'
-}
-
 export function RepositoryList() {
     const [repositories, setRepositories] = useState([]) //estado para armazenar a listagem do repositorio. Sempre que é uma lista, começa com o vetor vazio
 
@@ -26,10 +20,9 @@ export function RepositoryList() {
             <h1>Lista de repositórios</h1>
 
             <ul>
-                <RepositoryItem repository={repository}/>
-                <RepositoryItem repository={repository}/>
-                <RepositoryItem repository={repository}/>
-                <RepositoryItem repository={repository}/>
+                {repositories.map(repository => { //retornando o repositorio para a interface
+                    return <RepositoryItem key={repository.name} repository={repository}/> //toda vez que usar o map, precisa ter o key
+                })}
             </ul>
         </section>
     )
