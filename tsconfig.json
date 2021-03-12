@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"], //entende que vai estar lhe dando com a DOM
+    "allowJs": true, //Pode ter arquivo js e typescript
+    "jsx": "react-jsx", //falando que ultiliza o jsx, permitindo o uso do js com html
+    "noEmit": true, //bundle para nao emitir o codigo
+    "strict": true, //module de dar com erro no js
+    "moduleResolution": "node", //importa aquivo json
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"] //onde o codigo da aplicação vai estar
+}
