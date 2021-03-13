@@ -3,9 +3,15 @@ import { useState, useEffect } from "react"
 
 import { RepositoryItem } from "./RepositoryItem"
 
+interface Repository{
+    name: string;
+    description: string;
+    html_url: string; 
+}
 
 export function RepositoryList() {
-    const [repositories, setRepositories] = useState([]) //estado para armazenar a listagem do repositorio. Sempre que é uma lista, começa com o vetor vazio
+    // o estado vai armanezar uma lista de repositorios. Para isso, coloca [] e usa a funcionalidade generic <>
+    const [repositories, setRepositories] = useState<Repository[]>([]) //estado para armazenar a listagem do repositorio. Sempre que é uma lista, começa com o vetor vazio
 
     // o useEffect tem dois paramentros: qual função executar e quando executar. Toda vez que a varivel repositores mudar, a função será executada
     useEffect(() => { //chamando a api
